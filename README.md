@@ -29,21 +29,21 @@ Marosim vaqtlari (06:00 va 18:00) va tavsif matnlari `index.html` ichidagi
 open index.html
 ```
 
-## render.com'ga chiqarish
+## Saytni yangilash
 
-1. Papkani GitHub'ga push qiling:
-   ```bash
-   git init && git add -A && git commit -m "wedding invitation"
-   git branch -M main
-   git remote add origin git@github.com:<user>/dinora-doston-taklifnoma.git
-   git push -u origin main
-   ```
-2. render.com → **New +** → **Static Site** → repozitoriyni tanlang.
-3. Sozlamalar:
-   - **Build Command:** bo'sh qoldiring
-   - **Publish Directory:** `.`
-4. **Create Static Site** → 1-2 daqiqada havola tayyor:
-   `https://dinora-doston-taklifnoma.onrender.com`
+Fayl o'zgartirilgandan keyin:
 
-`render.yaml` fayli allaqachon shu sozlamalarni o'z ichiga oladi, shuning uchun
-Blueprint orqali ham chiqarish mumkin.
+```bash
+git add -A && git commit -m "update" && git push
+```
+
+GitHub Pages 1-2 daqiqada avtomatik yangilaydi, havola o'zgarmaydi:
+**https://madalievsardor.github.io/taklifnoma/**
+
+## Boshqa bepul variantlar
+
+- **Cloudflare Pages** — pages.cloudflare.com, GitHub repo'ni ulash kifoya
+- **Netlify** — netlify.com, papkani drag&drop qilib ham chiqarish mumkin
+- **Vercel** — vercel.com, repo'ni import qilish
+
+`render.yaml` fayli render.com uchun qolgan (kerak bo'lsa ishlatiladi).
