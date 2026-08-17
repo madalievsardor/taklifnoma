@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doston va Dinora — to'y taklifnomasi</title>
+<meta name="description" content="22-avgust, shanba. Soat 18:00. «Ziyoda» banket zali, Bekobod shahri.">
+<meta name="theme-color" content="#13201B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Doston va Dinora — to'y taklifnomasi">
+<meta property="og:description" content="22-avgust, shanba, soat 18:00. «Ziyoda» banket zali, Bekobod shahri. Sizni kutib qolamiz!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#10024;</text></svg>">
+<style>
+:root{
+  --bg:#0F1A16;
+  --card:#152420;
+  --card-2:#182923;
+  --gold:#C8A868;
+  --gold-dim:rgba(200,168,104,.34);
+  --gold-faint:rgba(200,168,104,.16);
+  --ivory:#EFE9DC;
+  --muted:#9FAA9C;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--ivory);
+  font-family:'Jost',system-ui,-apple-system,sans-serif;font-weight:300;line-height:1.7;
+  -webkit-font-smoothing:antialiased;display:flex;justify-content:center;
+}
+.sheet{
+  width:100%;max-width:480px;min-height:100svh;position:relative;
+  background:
+    radial-gradient(120% 55% at 50% 0%, #1B2C25 0%, transparent 62%),
+    radial-gradient(100% 45% at 50% 100%, #16261F 0%, transparent 58%),
+    var(--card);
+  padding:26px 22px 34px;
+}
+/* ikki qavatli oltin ramka */
+.frame{position:absolute;inset:16px;border:1px solid var(--gold-dim);pointer-events:none}
+.frame::before{content:"";position:absolute;inset:6px;border:1px solid var(--gold-faint)}
+.corner{position:absolute;width:26px;height:26px;color:var(--gold);opacity:.75}
+.corner.tl{top:-1px;left:-1px}
+.corner.tr{top:-1px;right:-1px;transform:scaleX(-1)}
+.corner.bl{bottom:-1px;left:-1px;transform:scaleY(-1)}
+.corner.br{bottom:-1px;right:-1px;transform:scale(-1)}
+.inner{position:relative;z-index:1;padding:44px 18px 34px;text-align:center}
+/* ---- bezaklar ---- */
+.star{width:52px;height:52px;margin:0 auto;color:var(--gold)}
+.rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:26px auto;max-width:260px}
+.rule i{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent)}
+.rule b{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);opacity:.85}
+/* ---- matn ---- */
+.eyebrow{font-size:10.5px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-top:18px}
+.names{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;
+  font-size:clamp(40px,12vw,54px);line-height:1.15;color:var(--ivory);margin-top:14px;
+}
+.names .va{
+  display:block;font-size:13px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold);
+  font-family:'Jost',sans-serif;margin:10px 0 8px;
+}
+.hello{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:var(--gold);margin-bottom:14px}
+.lead{font-size:15.5px;color:#C9D2C6;max-width:340px;margin:0 auto}
+.lead + .lead{margin-top:14px}
+/* ---- sana / vaqt ---- */
+.when{
+  display:flex;align-items:stretch;justify-content:center;gap:0;margin:32px auto 0;max-width:340px;
+  border-top:1px solid var(--gold-faint);border-bottom:1px solid var(--gold-faint);padding:22px 0;
+}
+.when .col{flex:1;padding:0 10px}
+.when .col + .col{border-left:1px solid var(--gold-faint)}
+.when .k{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.when .v{font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1;color:var(--ivory);margin-top:8px}
+.when .v small{display:block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-family:'Jost',sans-serif;margin-top:6px}
+/* ---- manzil ---- */
+.venue{margin-top:32px}
+.venue .k{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.venue .n{font-family:'Cormorant Garamond',serif;font-size:25px;color:var(--ivory);margin-top:10px}
+.venue .a{font-size:14px;color:var(--muted);margin-top:4px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:14px 30px;
+  border:1px solid var(--gold-dim);text-decoration:none;background:transparent;
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);
+  transition:background .3s ease,color .3s ease,border-color .3s ease;
+}
+.btn:hover{background:var(--gold);color:#12201A;border-color:var(--gold)}
+.btn svg{width:14px;height:14px}
+/* ---- footer ---- */
+.sign{margin-top:40px}
+.sign .k{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.sign .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:27px;color:var(--gold);margin-top:8px}
+/* ---- animatsiya ---- */
+.up{opacity:0;transform:translateY(14px);animation:up 1s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.up{animation:none;opacity:1;transform:none}}
+@media (max-width:360px){.inner{padding:36px 10px 28px}}
+</style>
+</head>
+<body>
+<main class="sheet">
+  <div class="frame">
+    <svg class="corner tl" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 12h6a6 6 0 0 0 6-6V0"/><path d="M0 4h2M4 0v2"/></svg>
+    <svg class="corner tr" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 12h6a6 6 0 0 0 6-6V0"/><path d="M0 4h2M4 0v2"/></svg>
+    <svg class="corner bl" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 12h6a6 6 0 0 0 6-6V0"/><path d="M0 4h2M4 0v2"/></svg>
+    <svg class="corner br" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 12h6a6 6 0 0 0 6-6V0"/><path d="M0 4h2M4 0v2"/></svg>
+  </div>
+
+  <div class="inner">
+    <svg class="star up" style="animation-delay:.05s" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true">
+      <path d="M32 4 L41 15 L55 12 L52 26 L63 32 L52 38 L55 52 L41 49 L32 60 L23 49 L9 52 L12 38 L1 32 L12 26 L9 12 L23 15 Z" opacity=".55"/>
+      <path d="M32 12 L38 20 L48 18 L46 28 L54 32 L46 36 L48 46 L38 44 L32 52 L26 44 L16 46 L18 36 L10 32 L18 28 L16 18 L26 20 Z"/>
+      <circle cx="32" cy="32" r="5.5" opacity=".8"/>
+    </svg>
+
+    <div class="eyebrow up" style="animation-delay:.14s">To'y taklifnomasi</div>
+    <h1 class="names up" style="animation-delay:.22s">Doston<span class="va">va</span>Dinora</h1>
+
+    <div class="rule up" style="animation-delay:.3s"><i></i><b></b><i></i></div>
+
+    <div class="hello up" style="animation-delay:.36s">Hurmatli Tezcode jamoasi!</div>
+    <p class="lead up" style="animation-delay:.42s">
+      Sizlarni nikoh to'yimiz munosabati bilan tashkil etilayotgan
+      to'y dasturxonimizga lutfan taklif qilamiz.
+    </p>
+    <p class="lead up" style="animation-delay:.48s">
+      Bu quvonchli kunda birga bo'lishingiz biz uchun katta sharaf va mamnuniyat.
+    </p>
+
+    <section class="when up" style="animation-delay:.56s">
+      <div class="col">
+        <div class="k">Sana</div>
+        <div class="v">22<small>avgust, shanba</small></div>
+      </div>
+      <div class="col">
+        <div class="k">Vaqt</div>
+        <div class="v">18:00<small>kechqurun</small></div>
+      </div>
+    </section>
+
+    <section class="venue up" style="animation-delay:.64s">
+      <div class="k">Manzil</div>
+      <div class="n">«Ziyoda» banket zali</div>
+      <div class="a">Toshkent viloyati, Bekobod shahri, 14-daha</div>
+      <a class="btn" href="https://yandex.uz/maps/-/CTg6AE28" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Xaritada ko'rish
+      </a>
+    </section>
+
+    <div class="rule up" style="animation-delay:.7s"><i></i><b></b><i></i></div>
+
+    <footer class="sign up" style="animation-delay:.74s">
+      <div class="k">Hurmat bilan</div>
+      <div class="n">Doston va Dinora</div>
+    </footer>
+  </div>
+</main>
+</body>
+</html>
