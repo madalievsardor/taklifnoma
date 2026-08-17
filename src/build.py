@@ -25,7 +25,7 @@ PAGES = {
         "INTRO2": "Duo va oq fotihalaringiz biz uchun eng qimmatli sovg'adir.",
         "VENUE":  "«Baxt uyi» to'yxonasi",
         "ADDR":   "Toshkent viloyati, Bekobod shahri",
-        "MAP":    "https://maps.app.goo.gl/ceZ2WMaHGPeqmhTk8",
+        "MAP":    "https://yandex.uz/maps/?ll=69.260247%2C40.222797&z=17&l=map&pt=69.260247%2C40.222797%2Cpm2rdm",
         "BG":     "#F7F2EC",
         "PAPER":  "#FCF9F5",
         "ACCENT": "#BE9C6E",
