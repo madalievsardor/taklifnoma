@@ -122,7 +122,10 @@ section{position:relative;z-index:1;padding:74px 26px}
 .card .time{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:var(--sage-deep);line-height:1}
 .card .when{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:8px}
 .card p{font-size:15px;margin-top:12px;color:var(--ink);opacity:.85}
+.card .at{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--sage-deep)}
 /* ---------- venue ---------- */
+.places{display:flex;flex-direction:column;gap:30px;max-width:400px;margin:0 auto}
+.place .tag{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
 .venue-name{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--sage-deep);margin-top:6px}
 .venue-addr{font-size:15px;color:var(--muted);margin-top:6px}
 .btn{
@@ -407,6 +410,7 @@ section{position:relative;z-index:1;padding:74px 26px}
         <div class="time">06:00</div>
         <div class="when">21-avgust, ertalab</div>
         <p>Tong saharda beriladigan nahor oshimizga marhamat qiling — duo va fotihalaringizni kutib qolamiz.</p>
+        <div class="at">«Baxt uyi» to'yxonasi</div>
       </article>
 
       <article class="card reveal">
@@ -420,6 +424,7 @@ section{position:relative;z-index:1;padding:74px 26px}
         <div class="time">18:00</div>
         <div class="when">21-avgust, kechqurun</div>
         <p>Aziz mehmonlarimiz sharafiga to'y dasturxonimiz yoziladi — bayramona ziyofatga taklif qilamiz.</p>
+        <div class="at">«Ziyoda» banket zali</div>
       </article>
     </div>
   </section>
@@ -438,14 +443,7 @@ section{position:relative;z-index:1;padding:74px 26px}
       </g>
       <g id="archGreens"></g>
     </svg>
-    <div class="venue-name reveal" id="venueName">—</div>
-    <div class="venue-addr reveal" id="venueAddr">—</div>
-    <a class="btn reveal" id="mapBtn" href="#" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle>
-      </svg>
-      Xaritada ko'rish
-    </a>
+    <div class="places" id="places"></div>
   </section>
 
   <!-- ================= COUNTDOWN ================= -->
@@ -490,9 +488,14 @@ const CONFIG = {
   bride:      "Dinora",
   groom:      "Doston",
   eventISO:   "2026-08-21T06:00:00+05:00",   // nahor oshi (countdown shunga qarab sanaydi)
-  venueName:  "«Baxt uyi» to'yxonasi",         // <-- to'yxona nomi
-  venueAddr:  "Toshkent viloyati, Bekobod shahri",  // <-- ko'cha, uy manzili
-  mapUrl:     "https://maps.app.goo.gl/ceZ2WMaHGPeqmhTk8",  // <-- Google Maps havolasi
+  places: [                                  // <-- har marosim o'z manzilida
+    { tag: "Nahor oshi — 06:00", name: "«Baxt uyi» to'yxonasi",
+      addr: "Toshkent viloyati, Bekobod shahri",
+      map:  "https://maps.app.goo.gl/ceZ2WMaHGPeqmhTk8" },
+    { tag: "To'y dasturxoni — 18:00", name: "«Ziyoda» banket zali",
+      addr: "Bekobod shahri, 14-daha",
+      map:  "https://yandex.uz/maps/-/CTg6AE28" }
+  ],
   music:      ""                             // <-- ixtiyoriy: mp3 fayl havolasi
 };
 
@@ -759,12 +762,17 @@ function blossoms(group, pts, scale = 1) {
 
 /* ---------- manzil ---------- */
 (function venue() {
-  const nm = document.getElementById("venueName"), ad = document.getElementById("venueAddr");
-  if (CONFIG.venueName) nm.textContent = CONFIG.venueName; else nm.style.display = "none";
-  if (CONFIG.venueAddr) ad.textContent = CONFIG.venueAddr; else ad.style.display = "none";
-  if (!CONFIG.venueName) { ad.style.fontSize = "20px"; ad.style.color = "var(--sage-deep)"; ad.style.fontFamily = "'Cormorant Garamond',serif"; }
-  const btn = document.getElementById("mapBtn");
-  if (CONFIG.mapUrl) btn.href = CONFIG.mapUrl; else btn.style.display = "none";
+  const host = document.getElementById("places");
+  const ico = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>';
+  CONFIG.places.forEach(pl => {
+    const d = document.createElement("div");
+    d.className = "place reveal";
+    d.innerHTML = '<div class="tag">' + pl.tag + '</div>' +
+      '<div class="venue-name">' + pl.name + '</div>' +
+      '<div class="venue-addr">' + pl.addr + '</div>' +
+      '<a class="btn" href="' + pl.map + '" target="_blank" rel="noopener">' + ico + "Xaritada ko'rish</a>";
+    host.appendChild(d);
+  });
 })();
 
 /* ---------- countdown ---------- */
