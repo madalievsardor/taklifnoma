@@ -10,7 +10,7 @@ BASEURL = "https://madalievsardor.github.io/taklifnoma"
 
 COMMON = {
     "DATE":  "21-avgust, juma",
-    "PHOTO": "../photo.jpg",
+    "PHOTO": "photo.jpg",   # har papkada o'z nusxasi bor (Vercel root directory uchun)
     "BASEURL": BASEURL,
 }
 
