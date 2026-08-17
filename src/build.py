@@ -9,19 +9,19 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASEURL = "https://madalievsardor.github.io/taklifnoma"
 
 COMMON = {
-    "DATE":  "21-avgust, juma",
     "PHOTO": "photo.jpg",   # har papkada o'z nusxasi bor (Vercel root directory uchun)
     "BASEURL": BASEURL,
 }
 
 PAGES = {
     "nahor": {
-        "TITLE":  "Dinora va Doston — nahor oshi taklifnomasi",
-        "OGDESC": "21-avgust, soat 06:00. «Baxt uyi» to'yxonasi, Bekobod shahri.",
-        "LABEL":  "Nahor oshi",
-        "TIME":   "06:00",
-        "NOTE":   "Ertalabki nahor oshimizga marhamat qiling.",
-        "INTRO1": "Sizni nikoh to'yimiz munosabati bilan beriladigan nahor oshimizga lutfan taklif qilamiz.",
+        "TITLE":  "Doston va Dinora — qiz bazmi taklifnomasi",
+        "OGDESC": "21-avgust, soat 18:00. «Baxt uyi» to'yxonasi, Bekobod shahri.",
+        "LABEL":  "Qiz bazmi",
+        "DATE":   "21-avgust, juma",
+        "TIME":   "18:00",
+        "NOTE":   "Qiz bazmi oqshomida siz bilan birga bo'lishni orzu qilamiz.",
+        "INTRO1": "Sizni nikoh to'yimiz munosabati bilan tashkil etilayotgan qiz bazmimizga lutfan taklif qilamiz.",
         "INTRO2": "Duo va oq fotihalaringiz biz uchun eng qimmatli sovg'adir.",
         "VENUE":  "«Baxt uyi» to'yxonasi",
         "ADDR":   "Toshkent viloyati, Bekobod shahri",
@@ -31,9 +31,10 @@ PAGES = {
         "ACCENT": "#BE9C6E",
     },
     "kechki": {
-        "TITLE":  "Dinora va Doston — to'y taklifnomasi",
-        "OGDESC": "21-avgust, soat 18:00. «Ziyoda» banket zali, Bekobod shahri.",
+        "TITLE":  "Doston va Dinora — to'y taklifnomasi",
+        "OGDESC": "22-avgust, soat 18:00. «Ziyoda» banket zali, Bekobod shahri.",
         "LABEL":  "To'y dasturxoni",
+        "DATE":   "22-avgust, shanba",
         "TIME":   "18:00",
         "NOTE":   "Bayramona ziyofatimizda siz bilan birga bo'lishni orzu qilamiz.",
         "INTRO1": "Sizni nikoh to'yimiz munosabati bilan tashkil etilayotgan quvonchli tantanamizga lutfan taklif qilamiz.",
